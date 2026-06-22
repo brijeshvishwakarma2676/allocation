@@ -1,0 +1,7 @@
+# Core Framework and Server
+fastapi
+uvicorn[standard]
+
+# Data Validation & Configuration
+pydantic
+pydantic-settings
