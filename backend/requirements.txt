@@ -1,7 +1,22 @@
-# Core Framework and Server
+# Core Framework
 fastapi
 uvicorn[standard]
 
-# Data Validation & Configuration
+# Database
+sqlalchemy
+pymysql
+cryptography
+
+# Data Validation & Config
 pydantic
 pydantic-settings
+python-dotenv
+
+# Background tasks / scheduling
+apscheduler
+
+# Server
+gunicorn
+
+# Utils
+python-multipart
