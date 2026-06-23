@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     # App
-    APP_NAME: str = "Allocation API"
+    APP_NAME: str = "EstateAllocator"
     VERSION: str = "1.0.0"
     PORT: int = 8000
     IS_PROD: bool = False

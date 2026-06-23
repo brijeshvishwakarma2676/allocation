@@ -14,7 +14,6 @@ def enable_towers(req: EnablePreferenceRequest, db: Session = Depends(get_db)):
     """
     Activate towers for a project by setting is_active=1.
     preference field maps to tower groups the admin wants to open.
-    For Naigaon: group 1 = towers with sequence 1–9 (already active),
     group 2/3 = towers that currently have is_active=0 and no sequence.
     """
     towers = db.query(Tower).filter(

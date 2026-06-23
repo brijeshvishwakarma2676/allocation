@@ -10,7 +10,7 @@ class Unit(Base):
 
     id           = Column(Integer, primary_key=True)
     unit_no      = Column(BigInteger)   # composite: floor*100 + position, e.g. 2908
-    unit_name    = Column(Text)         # e.g. "HoABL T8 - 1 BHK - 2908"
+    unit_name    = Column(Text)
     tower_id     = Column(Text)         # Mavis string, e.g. "tower-1757934355725"
     tower_name   = Column(Text)
     floor_number = Column(BigInteger)   # physical floor 1–35
