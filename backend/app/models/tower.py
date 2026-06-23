@@ -1,19 +1,16 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Integer, String, SmallInteger
 from app.database import Base
-from app.models.mixins import TimestampMixin
 
-class Tower(Base, TimestampMixin):
+
+class Tower(Base):
+    """Read-only reference to the Mavis towers table. Not created by create_all."""
     __tablename__ = "towers"
+    __table_args__ = {"extend_existing": True}
 
-    id              = Column(Integer, primary_key=True, autoincrement=True)
-    project_id      = Column(Integer, ForeignKey("projects.id"), nullable=False)
-    tower_no        = Column(Integer, nullable=False)
-    tower_name      = Column(String(100), nullable=False)
-    preference      = Column(Integer, nullable=False)   # 1, 2, or 3
-    sequence        = Column(Integer, nullable=False)   # 1–18 global order
-    total_floors    = Column(Integer, default=35)
-    units_per_floor = Column(Integer, default=8)
-
-    project = relationship("Project", back_populates="towers")
-    units   = relationship("Unit", back_populates="tower")
+    id             = Column(Integer, primary_key=True)
+    tower_id       = Column(String(255))   # Mavis string ID, e.g. "tower-1757934355725"
+    tower_name     = Column(String(255))
+    project_id     = Column(String(255))   # Mavis project string ID
+    tower_sequence = Column(Integer)       # allocation priority order (1 = first)
+    no_of_floors   = Column(Integer)
+    is_active      = Column(SmallInteger)

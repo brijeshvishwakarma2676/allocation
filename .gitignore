@@ -8,10 +8,10 @@ frontend/.env.*.local
 frontend/*.local
 
 # ─── Backend (Python) ────────────────────────────────────────
-backend/__pycache__/
-backend/*.py[cod]
-backend/*.pyo
-backend/*.pyd
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 backend/.venv/
 backend/venv/
 backend/env/
@@ -24,6 +24,8 @@ backend/.pytest_cache/
 backend/htmlcov/
 backend/.coverage
 backend/coverage.xml
+backend/__pycache__
+backend/logs
 
 # ─── Environment & Secrets ───────────────────────────────────
 .env

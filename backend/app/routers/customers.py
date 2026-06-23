@@ -1,23 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from pydantic import BaseModel
 from typing import Optional
 from app.database import get_db
 from app.models.customer import Customer
 from app.models.unit_allocation import UnitAllocation, AllocationStatus
+from app.schemas.customer import CustomerCreate, CustomerBulkCreate
 
 router = APIRouter(prefix="/customers", tags=["Customers"])
-
-
-class CustomerCreate(BaseModel):
-    ghng: str
-    name: Optional[str] = None
-    phone: Optional[str] = None
-    unit_type_preference: Optional[str] = None
-
-
-class CustomerBulkCreate(BaseModel):
-    customers: list[CustomerCreate]
 
 
 @router.get("/")

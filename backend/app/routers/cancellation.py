@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from pydantic import BaseModel
 from app.database import get_db
 from app.models.cancellation import Cancellation, CancellationStageLog, CancellationStage, StageAction
+from app.schemas.cancellation import CancelRequest, ReviewRequest
 
 router = APIRouter(prefix="/cancellation", tags=["Cancellation"])
 
@@ -13,18 +13,6 @@ STAGE_FLOW = [
     CancellationStage.BANKING,
     CancellationStage.COMPLETE,
 ]
-
-class CancelRequest(BaseModel):
-    ghng: str
-    unit_id: int
-    reason: str
-
-class ReviewRequest(BaseModel):
-    cancellation_id: int
-    action: StageAction
-    actor_role: str
-    reason: str | None = None
-    refund_reference_id: str | None = None
 
 @router.post("/request")
 def request_cancellation(req: CancelRequest, db: Session = Depends(get_db)):
@@ -46,7 +34,7 @@ def get_status(cancellation_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Cancellation not found")
     logs = db.query(CancellationStageLog).filter(
         CancellationStageLog.cancellation_id == cancellation_id
-    ).order_by(CancellationStageLog.actioned_at).all()
+    ).order_by(CancellationStageLog.created_at).all()
     return {"cancellation_id": c.id, "stage": c.stage, "logs": logs}
 
 @router.post("/review")
