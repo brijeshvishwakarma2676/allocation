@@ -1,7 +1,6 @@
-# Project Memory — Naigaon Allocation System
+# Project Memory — EstateAllocator
 
-**Client:** House of Abhinandan Lodha  
-**Property:** Residential Development, Naigaon  
+**Product:** EstateAllocator — SaaS real-estate unit allocation platform  
 **Source:** `memory/core/Allocation Logic Confidential.pdf`
 
 This directory is the persistent knowledge base for the allocation project.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Naigaon allocation system uses a **band-drop, fastest-finger-first** algorithm to allocate 2,223 units to thousands of registered customers on a competitive launch day. This document is the authoritative spec for implementing the core algorithm.
+EstateAllocator uses a **band-drop, fastest-finger-first** algorithm to allocate 2,223 units to thousands of registered customers on a competitive launch day. This document is the authoritative spec for implementing the core algorithm.
 
 ---
 

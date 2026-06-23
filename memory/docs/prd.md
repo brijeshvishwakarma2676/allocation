@@ -2,7 +2,7 @@
 
 ## Product Vision
 
-A real-time, high-concurrency unit allocation platform for the Naigaon residential launch. The system automates pre-allocation, competitive booking, cascading unit-drop logic, refunds, and admin oversight — all without human intervention during the live event.
+A real-time, high-concurrency unit allocation platform for real estate launches. The system automates pre-allocation, competitive booking, cascading unit-drop logic, refunds, and admin oversight — all without human intervention during the live event.
 
 ---
 

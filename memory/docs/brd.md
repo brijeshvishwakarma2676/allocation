@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-**Project Name:** Naigaon Allocation Logic & Algorithm  
-**Client:** House of Abhinandan Lodha  
-**Property:** Residential Development, Naigaon
+**Product:** EstateAllocator
 
 A technology-driven flat allocation system for a large-scale residential launch event. The system pre-assigns units to registered customers and runs a real-time competitive allocation on Launch Day.
 

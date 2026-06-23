@@ -9,7 +9,7 @@ Documentation phase — core algorithm and business requirements fully extracted
 ## Source Document
 
 - **File:** `memory/core/Allocation Logic Confidential.pdf`
-- **Project:** Naigaon Allocation Logic & Algorithm (House of Abhinandan Lodha)
+- **Project:** EstateAllocator
 - **Pages:** 13
 
 ## What's Documented

@@ -2,7 +2,7 @@
 
 ## System Overview
 
-A high-concurrency real-time allocation engine for the Naigaon residential launch. The core is a band-drop algorithm that manages unit pre-assignment and competitive booking across 18 towers and 35 floors.
+A high-concurrency real-time allocation engine for real estate launches. The core is a band-drop algorithm that manages unit pre-assignment and competitive booking across 18 towers and 35 floors.
 
 ---
 
